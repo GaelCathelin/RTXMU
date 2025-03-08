@@ -25,6 +25,7 @@
 #include <queue>
 #include <mutex>
 #include <cinttypes>
+#include <string>
 #include "Logger.h"
 
 namespace rtxmu
@@ -113,7 +114,7 @@ namespace rtxmu
             delete m_asBufferBuildQueue[accelStructId];
             m_asBufferBuildQueue[accelStructId] = nullptr;
         }
-        
+
         // Logger
         std::string m_buildLogger;
 

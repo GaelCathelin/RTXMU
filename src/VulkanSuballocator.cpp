@@ -95,7 +95,7 @@ namespace rtxmu
         uint32_t memoryTypeIndex = getMemoryIndex(m_allocator->physicalDevice, memoryRequirements.memoryTypeBits, propFlags, heapflags);
 
         // Passed in alignment needs to be the same for alignment returned by getBufferMemoryRequirements
-        if (memoryRequirements.alignment != alignment)
+        if (memoryRequirements.alignment > alignment)
         {
             if (Logger::isEnabled(Level::FATAL))
             {

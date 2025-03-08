@@ -36,7 +36,7 @@ namespace rtxmu
     typedef vk::DispatchLoaderDynamic VkDispatchLoaderDynamic;
 #endif
 
-    constexpr uint32_t DefaultBlockAlignment = 65536;
+    constexpr uint32_t DefaultBlockAlignment = 256;
 
     struct Allocator
     {

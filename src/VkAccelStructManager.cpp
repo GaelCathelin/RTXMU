@@ -513,8 +513,8 @@ namespace rtxmu
         // Clear out previous logging
         m_buildLogger.clear();
 
-        double memoryReductionRatio = (static_cast<double>(m_totalCompactedMemory) / (m_totalUncompactedMemory + 1.0));
-        double fragmentedRatio = 1.0 - (static_cast<double>(m_totalCompactedMemory) / (m_compactionPool->getSize() + 1.0f));
+        float memoryReductionRatio = (static_cast<float>(m_totalCompactedMemory) / (m_totalUncompactedMemory + 1.0f));
+        float fragmentedRatio = 1.0f - (static_cast<float>(m_totalCompactedMemory) / (m_compactionPool->getSize() + 1.0f));
         m_buildLogger.append(
             "TOTAL Result memory allocated:          " + std::to_string(m_totalUncompactedMemory         / 1000000.0f) + " MB\n"
             "TOTAL Compaction memory allocated:      " + std::to_string(m_totalCompactedMemory           / 1000000.0f) + " MB\n"
